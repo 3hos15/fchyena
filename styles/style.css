@@ -135,11 +135,7 @@ header a {
 nav {
   position:fixed;
   inset: 0;
-  /* translate:93% -88%; */
-  translate:93% -60%;
-  width: 15em;
-  height: fit-content;
-
+  translate:93% -88%;
   transition:2s; 
   z-index: 9999;
   background-color: black;
