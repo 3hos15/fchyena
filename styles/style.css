@@ -93,15 +93,13 @@ section {
     transform-origin: center center;
     cursor: pointer;
     transition: all 0.5s ease;
-    /* overflow: visible; */
+    overflow: hidden;
 }
-
 section section:nth-of-type(1) {
     background-color: rgb(68, 190, 231);
     z-index: 4;
     translate: 2.1em -1em;
     height: 400vh;
-    /* width: 167vh; */
     width: 77.5em;
     margin-right: 2em;
     cursor: default;
@@ -111,7 +109,6 @@ section section:nth-of-type(2) {
     background-color: rgb(122, 208, 61);
     z-index: 2;
     translate: 29.5em -4.7em;
-    /* translate: 19em -4.7em; */
     height: 250vh;
     width: 52.7em;
     overflow: hidden;
@@ -259,7 +256,7 @@ li {
     }
     
     section section:nth-of-type(2) {
-        translate: 3.6em -2.2em;
+        translate: 3.6em -1.7em;
         height: 190vh;
         width: 36em;
     }
@@ -323,3 +320,4 @@ li {
         translate:93% -88%;
       }
 }
+
