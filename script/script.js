@@ -1,5 +1,16 @@
 console.log("hi");
 
+let theButton = document.querySelector("header button");
+let theNav = document.querySelector("nav");
+
+theButton.onclick = toggleMenu;
+
+function toggleMenu() {
+  theNav.classList.toggle("toonMenu");
+  theButton.classList.toggle("toonMenu")
+}
+
+
 
 let expandedSection = null; // Track the currently expanded section
 
