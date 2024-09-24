@@ -12,21 +12,21 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-background: #000000;
-        --color-films: #00bee6;
-        --color-eten: #a0dc00;
-        --color-nieuws: #ff0;
-        --color-info: #ffa000;
-        --color-tekst: #000000;
-        --color-nav-tekst: #ffffff;
+        --color-background-nav: #ffffff;
+        --color-films: #0f88a0;
+        --color-eten: #6f9112;
+        --color-nieuws: rgb(135, 135, 11);
+        --color-info: #b47303;
+        --color-tekst: #ffffff;
+        --color-nav-tekst: #000000;
         --color-fc-streep: #DB0202;
-        --color-hover: #ffffff; 
+        --color-hover: #000000; 
     
-    }
-    
-}
+    }  
+} */
 
 @font-face {
     font-family: 'rhode';
@@ -49,7 +49,6 @@ body {
     overflow-x: visible;
     color: var(--color-tekst);
     letter-spacing: .02em;
-
 }
 
 
@@ -113,6 +112,7 @@ nav button {
     /* position:relative; */
     z-index: 99999;
     background-color: var(--color-background-nav);
+    /* position: absolute; */
 }
 nav ul {
     margin-bottom: 1.5em;
@@ -216,7 +216,7 @@ section section:nth-of-type(3) {
 
 section section:nth-of-type(4) {
     background-color: var(--color-info);
-    z-index: 1;
+    z-index:1;
     translate: 38em -2.3em;
     height: 330vh;
     width: 47em;
@@ -231,12 +231,15 @@ section section:nth-of-type(4) {
 
     /* height: 100%; */
 
-    z-index: 10; /* The expanded section gets a high z-index */
+    z-index: 5; /* The expanded section gets a high z-index */
     border-radius: 0;
     overflow-y: auto; /* Allows scrolling */
 }
 
+/* section section:nth-of-type(4):has(.expanded) main section section:nth-of-type(3) {
+    z-index:1000;
 
+} */
 
 
 
@@ -265,6 +268,10 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    color: var(--color-tekst);
+}
+
 p {
     font-size: 1.375em;
     font-family: 'aaux';
@@ -285,12 +292,14 @@ main button {
 
 main button:hover {
     color: var(--color-hover);
-    border-bottom: solid white 0.3em;
+    border-bottom: solid var(--color-hover) 0.3em;
 }
 li {
     text-decoration: none;
 }
-
+article button {
+    color: var(--color-tekst);
+}
 
 /* section h2:not(article h2) {
     rotate: 90deg;
@@ -307,6 +316,12 @@ li {
 section > h2:nth-of-type(3),
 section > h2:nth-of-type(4)  {
    rotate: 90deg;
+}
+
+section > h2:not(article h2) {
+    rotate: 90deg;
+    position: absolute;
+    inset: 1;
 }
 
 
@@ -368,13 +383,13 @@ img {
     
     section section:nth-of-type(3) {
         translate: 5em 7em;
-        height: 180vh;
+        height: 570vh;
         width: 36em;
     }
     
     section section:nth-of-type(4) {
         translate: 2em 0.4em;
-        height: 130vh;
+        height: 700vh;
         width: 41em;
     }
 
@@ -409,13 +424,13 @@ img {
     
     section section:nth-of-type(3) {
         translate: 5em -1.3em;
-        height: 180vh;
+        height: 470vh;
         width: 36em;
     }
     
     section section:nth-of-type(4) {
         translate: 2em -1.3em;
-        height: 130vh;
+        height: 180vh;
         width: 41em;
     }
 

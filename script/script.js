@@ -10,46 +10,28 @@ function toggleMenu() {
   theButton.classList.toggle("toonMenu")
 }
 
+//bron: ChatGPT
+//promt: Could you write js code for this so that when you press on one of the stacked sections, it comes to the front. here is my code (html + css toegevoegd)
+//link naar gesprek https://chatgpt.com/share/66f27b39-9704-8002-8881-439e48489956
 
+// Select all the section elements inside the main container
+let sections = document.querySelectorAll('main > section > section');
 
-let expandedSection = null; // Track the currently expanded section
-
-// Function to expand the clicked section
-function expandSection(sectionElement) {
-    // If the clicked section is already expanded, do nothing
-    if (sectionElement.classList.contains('expanded')) {
-        return;
-    }
-
-    // If another section is currently expanded, collapse it
-    if (expandedSection !== null) {
-        let prevExpanded = document.querySelector('.expanded');
-        if (prevExpanded) {
-            prevExpanded.classList.remove('expanded');
-            prevExpanded.style.zIndex = ""; // Reset z-index
-        }
-    }
-
-    // Expand the clicked section
-    sectionElement.classList.add('expanded');
-    sectionElement.style.zIndex = 10; // Bring it to the front
-
-    expandedSection = sectionElement; // Update the currently expanded section
-}
-
-// Attach click event listeners to sections
-document.querySelectorAll('section > section').forEach(section => {
+// Function to handle bringing the clicked section to the front
+sections.forEach(section => {
     section.addEventListener('click', function() {
-        expandSection(this);
-    });
-});
+        // Remove the expanded class from all sections
+        sections.forEach(s => s.classList.remove('expanded'));
+        
+        // Increase z-index and add the expanded class to the clicked section
+        this.classList.add('expanded');
+        this.style.zIndex = 10;  // Bring to the front
 
-// Ensure clicking on any section brings it to the front
-document.querySelectorAll('section > section').forEach(section => {
-    section.addEventListener('click', function() {
-        // Remove expanded class from previously expanded section if it's not the clicked one
-        if (expandedSection !== this) {
-            expandSection(this);
-        }
+        // Reset the z-index of all other sections
+        sections.forEach(s => {
+            if (s !== this) {
+                s.style.zIndex = '';  // Reset to default
+            }
+        });
     });
 });
