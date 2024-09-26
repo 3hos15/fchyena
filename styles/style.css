@@ -119,7 +119,6 @@ nav ul:not(section nav ul) {
 
     translate:-100%;
     background-color: var(--color-background-nav);
-
 }
 
 nav button span {
@@ -217,7 +216,7 @@ section section:nth-of-type(4) {
 /* Bron: ChatGPT  */
 .expanded {
     position: absolute;
-    /* height: 100%; */
+
     z-index: 10;
     border-radius: 0;
     overflow-y: auto;
