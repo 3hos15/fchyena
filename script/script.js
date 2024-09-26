@@ -18,68 +18,68 @@ function toggleMenu() {
 let sections = document.querySelectorAll('main > section > section');
 
 // Function to handle bringing the clicked section to the front
-sections.forEach(section => {
-    section.addEventListener('click', function() {
-        // Remove the expanded class from all sections
-        sections.forEach(s => s.classList.remove('expanded'));
+// sections.forEach(section => {
+//     section.addEventListener('click', function() {
+//         // Remove the expanded class from all sections
+//         sections.forEach(s => s.classList.remove('expanded'));
         
-        // Increase z-index and add the expanded class to the clicked section
-        this.classList.add('expanded');
-        this.style.zIndex = 10;  // Bring to the front
+//         // Increase z-index and add the expanded class to the clicked section
+//         this.classList.add('expanded');
+//         this.style.zIndex = 10;  // Bring to the front
 
-        // Reset the z-index of all other sections
-        sections.forEach(s => {
-            if (s !== this) {
-                s.style.zIndex = '';  // Reset to default
-            }
-        });
-    });
-});
+//         // Reset the z-index of all other sections
+//         sections.forEach(s => {
+//             if (s !== this) {
+//                 s.style.zIndex = '';  // Reset to default
+//             }
+//         });
+//     });
+// });
 
-// const eersteSection = document.querySelector("section section:nth-of-type(1)");
-// const tweedeSection = document.querySelector("section section:nth-of-type(2)");
-// const derdeSection = document.querySelector("section section:nth-of-type(3)");
-// const vierdeSection = document.querySelector("section section:nth-of-type(4)");
+const eersteSection = document.querySelector("section section:nth-of-type(1)");
+const tweedeSection = document.querySelector("section section:nth-of-type(2)");
+const derdeSection = document.querySelector("section section:nth-of-type(3)");
+const vierdeSection = document.querySelector("section section:nth-of-type(4)");
 
-// function makeSectionEersteActive() {
-// 	eersteSection.classList.add("active");
-// 	tweedeSection.classList.remove("active");
-//     derdeSection.classList.remove("active");
-//     vierdeSection.classList.remove("active");
-//     console.log("Section 1 is actief");
-// }
+function makeSectionEersteActive() {
+	eersteSection.classList.add("active");
+	tweedeSection.classList.remove("active");
+    derdeSection.classList.remove("active");
+    vierdeSection.classList.remove("active");
+    console.log("Section 1 is actief");
+}
 
-// eersteSection.onclick = makeSectionEersteActive;
+eersteSection.onclick = makeSectionEersteActive;
 
-// function makeSectionTweedeActive() {
-// 	tweedeSection.classList.add("active");
-// 	eersteSection.classList.remove("active");
-//     derdeSection.classList.remove("active");
-//     vierdeSection.classList.remove("active");
-//     console.log("Section 2 is actief");
-// }
+function makeSectionTweedeActive() {
+	tweedeSection.classList.add("active");
+	eersteSection.classList.remove("active");
+    derdeSection.classList.remove("active");
+    vierdeSection.classList.remove("active");
+    console.log("Section 2 is actief");
+}
 
-// tweedeSection.onclick = makeSectionTweedeActive;
+tweedeSection.onclick = makeSectionTweedeActive;
 
-// function makeSectionDerdeActive() {
-//     derdeSection.classList.add("active");
-//     eersteSection.classList.remove("active");
-// 	tweedeSection.classList.remove("active");
-//     vierdeSection.classList.remove("active");
-//     console.log("Section 3 is actief");
-// }
+function makeSectionDerdeActive() {
+    derdeSection.classList.add("active");
+    eersteSection.classList.remove("active");
+	tweedeSection.classList.remove("active");
+    vierdeSection.classList.remove("active");
+    console.log("Section 3 is actief");
+}
 
-// derdeSection.onclick = makeSectionDerdeActive;
+derdeSection.onclick = makeSectionDerdeActive;
 
-// function makeSectionVierdeActive() {
-//     vierdeSection.classList.add("active");  
-//     eersteSection.classList.remove("active");
-// 	tweedeSection.classList.remove("active");
-//     derdeSection.classList.remove("active"); 
-//     console.log("Section 4 is actief");
-// }
+function makeSectionVierdeActive() {
+    vierdeSection.classList.add("active");  
+    eersteSection.classList.remove("active");
+	tweedeSection.classList.remove("active");
+    derdeSection.classList.remove("active"); 
+    console.log("Section 4 is actief");
+}
 
-// vierdeSection.onclick = makeSectionVierdeActive;
+vierdeSection.onclick = makeSectionVierdeActive;
 
 // Select all the section elements inside the main container
 // let sections = document.querySelectorAll('main > section > section');
