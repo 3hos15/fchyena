@@ -87,7 +87,7 @@ nav {
     height: 20em;
 } */
 
-nav {
+nav:not(section nav) {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -109,7 +109,7 @@ nav button {
     background-color: var(--color-background-nav);
 }
 
-nav ul {
+nav ul:not(section nav ul) {
     margin-bottom: 1.5em;
     padding: 0;
     list-style:none;
@@ -163,7 +163,6 @@ nav.toonMenu span:nth-child(3) {
 
 section {
     position: absolute;
-    cursor: default;
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -296,6 +295,12 @@ img {
     display: block;
     width: 90%;
 }
+
+section section:nth-of-type(4) ul{
+    background-color: var(--color-info);
+}
+
+
 
 @media screen and (min-width: 1281px) and (max-width: 1469px) {
 

@@ -148,10 +148,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - goed gebruik maken van de inspect in de browser om te kijken of er ergens bijv. verkeerde margin of padding is
+  - gebruik maken van pseude selectoren
+  - 
 
 </details>
 
@@ -179,8 +178,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Begin vorige week was ik opnieuw begonnen aan een nieuwe website. Het opzetten en stijlen van de website ging deels makkelijk en goed, alleen zit ik nu te kijken hoe ik heb goed toegankelijk kan maken met de screenreader. Omdat er section op elkaar zijn gestapelt moet ik goed kijken hoe de gebruiker er zo goed mogelijk doorheen kan navigeren.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
