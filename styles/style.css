@@ -1,17 +1,18 @@
 :root {
+    color-scheme: light dark;
     --color-background: #ffffff;
     --color-background-nav: #000000;
-    --color-films: #00bee6;
+    --color-films: light-dark( #00bee6, #b78181);
     --color-eten: #a0dc00;
     --color-nieuws: #ff0;
     --color-info: #ffa000;
     --color-tekst: #000000;
     --color-nav-tekst: #ffffff;
     --color-fc-streep: #DB0202;
-    --color-hover: #ffffff; 
+    --color-hover: light-dark( #ffffff, #000000); 
 }
-
-/* @media (prefers-color-scheme: dark) {
+/* 
+@media (prefers-color-scheme: dark) {
     :root {
         --color-background: #000000;
         --color-background-nav: #ffffff;
@@ -105,7 +106,7 @@ nav button {
     appearance:none;
     aspect-ratio: 1/1;
     background-color: none;
-    z-index: 99999;
+    z-index: 999999;
     background-color: var(--color-background-nav);
 }
 
@@ -141,8 +142,9 @@ nav button span:nth-child(2) {
 nav button span:nth-child(3) {
 	translate: 0 .5em;
 }
-
-nav.toonMenu ul {
+/*  */
+nav.toonMenu ul
+nav:focus-within {
     translate:50%;
 }
 
@@ -160,7 +162,7 @@ nav.toonMenu span:nth-child(3) {
 	rotate: -45deg;
 }
 
-section {
+/* section { */
     /* position: fixed; */
     /* inset:0; */
     /* padding: 20px; */
@@ -171,7 +173,7 @@ section {
     /* transition: all 0.5s ease; */
     /* overflow: visible; */
 
-}
+/* } */
 
 section section {
     position: fixed;
@@ -188,11 +190,9 @@ section section div {
 
 section section:nth-of-type(1) {
     left:2.1em;
-    padding-top:5em;
+    padding-top:6em;
     z-index: 4;
-    /* translate: 2.1em -1em; */
-    /* height: 400vh; */
-    /* width: 77.5em; */
+
     width: calc(100% - 40px* 5);
     margin-right: 2em;
     cursor: default;
@@ -206,8 +206,7 @@ section section:nth-of-type(2) {
     left:29.5em;
     padding-top:2em;
     z-index: 2;
-    /* translate: 29.5em -4.7em; */
-    /* height: 160vh; */
+
     width: 52.7em;
     cursor: default;
 }
@@ -220,8 +219,6 @@ section section:nth-of-type(3) {
     padding-top:7em;
     left:30.5em;
     z-index: 3;
-    /* translate: 30.5em 4.5em; */
-    /* height: 560vh; */
     width: 53em;
     cursor: default;
 }
@@ -234,8 +231,6 @@ section section:nth-of-type(4) {
     padding-top:3em;
     left:38em;
     z-index:1;
-    /* translate: 38em -2.3em; */
-    /* height: 330vh; */
     width: 47em;
     cursor: default;
 
@@ -245,14 +240,6 @@ section section:nth-of-type(4)  div {
     background-color: var(--color-info);
 }
 
-/* Bron: ChatGPT  */
-/* .expanded {
-    position: absolute;
-
-    z-index: 10;
-    border-radius: 0;
-    overflow-y: auto;
-} */
  
 section section.active {
     overflow: auto;
@@ -336,26 +323,47 @@ section section:nth-of-type(4) ul{
 }
 
 
-/* 
+
+
 @media screen and (min-width: 1281px) and (max-width: 1469px) {
 
     section section:nth-of-type(1) {
-        width: 67em;
+        left:2.1em;
+        padding-top:6em;
+        z-index: 4;
+        width: calc(100% - 40px* 5);
+        margin-right: 2em;
+        cursor: default;
     }
-
+    
     section section:nth-of-type(2) {
-        translate: 19em -4.7em;
+        left:19.5em;
+        padding-top:2em;
+        z-index: 2;
+        width: 52.7em;
+        cursor: default;
     }
-
+    
     section section:nth-of-type(3) {
-        translate: 20em 4.5em;
+        padding-top:7em;
+        left:30.5em;
+        z-index: 3;
+        width: 53em;
+        cursor: default;
     }
-
+    
+    
     section section:nth-of-type(4) {
-        translate: 28em -2.3em;
+        padding-top:3em;
+        left:38em;
+        z-index:1;
+        width: 47em;
+        cursor: default;
+    
     }
+    
 }
-
+/* 
 @media screen and (min-width: 1040px) and (max-width: 1280px) {
 
     section section:nth-of-type(1) {
@@ -443,5 +451,5 @@ section section:nth-of-type(4) ul{
     p {
         font-size: 1.125em;
     }
-}
- */
+} */
+
