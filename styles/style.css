@@ -2,15 +2,30 @@
     color-scheme: light dark;
     --color-background: #ffffff;
     --color-background-nav: #000000;
-    --color-films: light-dark( #00bee6, #b78181);
+    --color-films: #00bee6;
+    --color-eten: #a0dc00;
+    --color-nieuws: #ff0;
+    --color-textselect: rgb(226, 226, 21);
+    --color-info: #ffa000;
+    --color-tekst: #000000;
+    --color-nav-tekst: #ffffff;
+    --color-fc-streep: #DB0202;
+    --color-hover: #ffffff; 
+}
+
+/* :root {
+    color-scheme: light dark;
+    --color-background: light-dark(#ffffff,#000000);
+    --color-background-nav: #000000;
+    --color-films: #00bee6;
     --color-eten: #a0dc00;
     --color-nieuws: #ff0;
     --color-info: #ffa000;
     --color-tekst: #000000;
     --color-nav-tekst: #ffffff;
     --color-fc-streep: #DB0202;
-    --color-hover: light-dark( #ffffff, #000000); 
-}
+    --color-hover: #ffffff; 
+} */
 /* 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -38,6 +53,7 @@
     src: url('../fonts/aaux.ttf');
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -47,6 +63,12 @@ body {
     overflow-x: visible;
     color: var(--color-tekst);
     letter-spacing: .02em;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    text-shadow: none;
+    background: var(--color-textselect);
 }
 
 header {
@@ -162,19 +184,6 @@ nav.toonMenu span:nth-child(3) {
 	rotate: -45deg;
 }
 
-/* section { */
-    /* position: fixed; */
-    /* inset:0; */
-    /* padding: 20px; */
-    /* box-sizing: border-box; */
-    /* background-color: var(--color-background); */
-    /* transform-origin: center center; */
-    /* cursor: pointer; */
-    /* transition: all 0.5s ease; */
-    /* overflow: visible; */
-
-/* } */
-
 section section {
     position: fixed;
     top:0;
@@ -188,62 +197,10 @@ section section div {
     padding: 1em;
 }
 
-section section:nth-of-type(1) {
-    left:2.1em;
-    padding-top:6em;
-    z-index: 4;
 
-    width: calc(100% - 40px* 5);
-    margin-right: 2em;
-    cursor: default;
-}
-
-section section:nth-of-type(1)  div {
-    background-color: var(--color-films);
-}
-
-section section:nth-of-type(2) {
-    left:29.5em;
-    padding-top:2em;
-    z-index: 2;
-
-    width: 52.7em;
-    cursor: default;
-}
-
-section section:nth-of-type(2)  div {
-    background-color: var(--color-eten);
-}
-
-section section:nth-of-type(3) {
-    padding-top:7em;
-    left:30.5em;
-    z-index: 3;
-    width: 53em;
-    cursor: default;
-}
-
-section section:nth-of-type(3)  div {
-    background-color: var(--color-nieuws);
-}
-
-section section:nth-of-type(4) {
-    padding-top:3em;
-    left:38em;
-    z-index:1;
-    width: 47em;
-    cursor: default;
-
-}
-
-section section:nth-of-type(4)  div {
-    background-color: var(--color-info);
-}
-
- 
 section section.active {
     overflow: auto;
-    z-index: 99999;
+    z-index: 99999 !important;
 }
 
 h1 {
@@ -277,6 +234,15 @@ p {
     font-family: 'aaux';
     font-weight: lighter;
     width: 90%;
+    line-height: 1.4;
+}
+
+a {
+    color: inherit;
+}
+
+a:not(section section:nth-of-type(1) div a):hover {
+    text-decoration: none;
 }
 
 main button {
@@ -301,155 +267,50 @@ li {
 article button {
     color: var(--color-tekst);
 }
-main > section > section:nth-of-type(3) > h2:nth-of-type(1) {
-    color:red;
-    writing-mode: vertical-lr;
-    align-items: end;
-    margin-left: 22em;
-}
-
-main > section > section:nth-of-type(4) > h2:nth-of-type(1) {
-    color:red;
-    writing-mode: vertical-lr;
-}
 
 img {
     display: block;
     width: 90%;
 }
 
-section section:nth-of-type(4) ul{
-    background-color: var(--color-info);
-}
 
-
-
-
-@media screen and (min-width: 1281px) and (max-width: 1469px) {
+@media (min-width: 90em) {
 
     section section:nth-of-type(1) {
-        left:2.1em;
-        padding-top:6em;
-        z-index: 4;
         width: calc(100% - 40px* 5);
-        margin-right: 2em;
-        cursor: default;
-    }
-    
-    section section:nth-of-type(2) {
-        left:19.5em;
-        padding-top:2em;
-        z-index: 2;
-        width: 52.7em;
-        cursor: default;
-    }
-    
-    section section:nth-of-type(3) {
-        padding-top:7em;
-        left:30.5em;
-        z-index: 3;
-        width: 53em;
-        cursor: default;
-    }
-    
-    
-    section section:nth-of-type(4) {
-        padding-top:3em;
-        left:38em;
-        z-index:1;
-        width: 47em;
-        cursor: default;
-    
-    }
-    
-}
-/* 
-@media screen and (min-width: 1040px) and (max-width: 1280px) {
-
-    section section:nth-of-type(1) {
-        translate: 1.1em 1.3em;
-        width: 53.7em;
+        width: 1240px;
+        left: calc(50% - 1440px / 2 + 40px);
     }
 
     section section:nth-of-type(2) {
-        translate: 4.5em -2.1em;
+        left: calc(50% - 1440px / 2 + 40px* 12);
     }
 
     section section:nth-of-type(3) {
-        translate: 5.5em 6.9em;
+        left: calc(50% - 1440px / 2 + 500px);
     }
 
     section section:nth-of-type(4) {
-        translate: 13.5em 0.5em;
+        left: calc(50% - 1440px / 2 + 40px* 15.25);
     }
 }
 
-@media screen and (min-width: 767px) and (max-width: 1040px) {
-
+@media (max-width: 80em) {
     section section:nth-of-type(1) {
-        translate: 1em 1.5em;
-        height: 150vh;
-        width: 36em;
+        padding-top: 10em;
     }
-    
+
     section section:nth-of-type(2) {
-        translate: 3.6em -1.7em;
-        height: 190vh;
-        width: 36em;
+        padding-top: 6.25em;
     }
-    
+
     section section:nth-of-type(3) {
-        translate: 5em 7em;
-        height: 570vh;
-        width: 36em;
+        padding-top: 15.625em;
     }
-    
+
     section section:nth-of-type(4) {
-        translate: 2em 0.4em;
-        height: 700vh;
-        width: 41em;
+        padding-top: 9em;
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 767px) {
-
-    header {
-        margin: 0;
-        height: 4em;
-        align-items: center;
-    }
-
-    h1 {
-        font-size: 2.8em;
-        margin: 0;
-    }
-
-    section section:nth-of-type(1) {
-        translate: -1.25em -1.3em;
-        height: 150vh;
-        width: 36em;
-    }
-    
-    section section:nth-of-type(2) {
-        translate: 9em -1.3em;
-        height: 190vh;
-        width: 36em;
-    }
-    
-    section section:nth-of-type(3) {
-        translate: 5em -1.3em;
-        height: 470vh;
-        width: 36em;
-    }
-    
-    section section:nth-of-type(4) {
-        translate: 2em -1.3em;
-        height: 180vh;
-        width: 41em;
-    }
-
-    p {
-        font-size: 1.125em;
-    }
-} */
 
