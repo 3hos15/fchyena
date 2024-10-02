@@ -77,6 +77,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
 }
 
 header a {
@@ -89,26 +90,6 @@ header a {
     text-transform: uppercase;
 }
 
-/* 
-nav {
-  position:fixed;
-  inset: 0;
-  translate:438% -70%;
-  z-index: 9999;
-  background-color: black;
-  width: 20em;
-  height: 20em;
-} */
-/* nav {
-    display: grid;
-    justify-items: start;
-
-    justify-content: start;
-    align-content: center;
-    background-color: black;
-    width: 15em;
-    height: 20em;
-} */
 
 nav:not(section nav) {
     display: flex;
@@ -126,14 +107,13 @@ nav button {
     order: 1;
     border: none;
     appearance:none;
-    aspect-ratio: 1/1;
-    background-color: none;
-    z-index: 999999;
+    height: 6.5em;
+    z-index: 99;
     background-color: var(--color-background-nav);
 }
 
 nav ul:not(section nav ul) {
-    margin-bottom: 1.5em;
+    /* margin: 0;
     padding: 0;
     list-style:none;
 
@@ -141,20 +121,46 @@ nav ul:not(section nav ul) {
     inset: 0;
 
     translate:-100%;
+    transform: translate(204px, -210px);
+
     background-color: var(--color-background-nav);
+
+    width: 260px;
+    height: 300px;
+    max-height: 100%; */
+    position: fixed;
+    z-index: 1100;
+    top: 0;
+    right: 0;
+    transform: translate(204px, -210px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 300px;
+    max-height: 100%;
+    background-color: #000;
+    transition: transform .4s;
+}
+
+nav ul:not(section nav ul) li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav button span {
 	display:block;
-	width: 2.5em;
+	width: 2.1em;
 	height: .35em;
 	background-color: var(--color-background);
 	grid-row-start: 1;
 	grid-column-start: 1;
+
 }
 
 nav button span:nth-child(1) {
-	translate: 0-.5em;
+	translate: 0 -.35em -.5em;
 }
   
 nav button span:nth-child(2) {
@@ -162,25 +168,31 @@ nav button span:nth-child(2) {
 }
   
 nav button span:nth-child(3) {
-	translate: 0 .5em;
+	translate: 0 .35em .5em;
+}
+nav.toonMenu button {
+    z-index: 99;
 }
 /*  */
-nav.toonMenu ul
-nav:focus-within {
-    translate:50%;
+nav.toonMenu ul {
+    /* z-index: 99;
+    translate: 10em; */
+    transform: translate(10em, 10em);
+
+    /* position: relative; */
 }
 
 nav.toonMenu span:nth-child(1) {
-	translate:0 0em;
+	translate:0 0;
 	rotate: 45deg;
 }
   
 nav.toonMenu span:nth-child(2) {
-	scale: 0 1;
+	scale: 0;
 }
 
 nav.toonMenu span:nth-child(3) {
-	translate:0 -.5em;
+	translate:0 -.7em;
 	rotate: -45deg;
 }
 
@@ -197,11 +209,58 @@ section section div {
     padding: 1em;
 }
 
+section section:nth-of-type(1) {
+    z-index: 5;
+    left:2.1em;
+    padding-top:8.5em;
+    z-index: 4;
+    width: calc(100% - 2.5em* 5);
+    padding-bottom: 7.5em;
+    margin-right: 2em;
+    cursor: default;
+
+}
+
+section section:nth-of-type(2) {
+    z-index: 2;
+    right: 7.5em;
+    width: calc(100% - 2.5em* 5);
+    max-width: 52.5em;
+    padding-top: 4em;
+    padding-bottom: 2.5em;
+    cursor: default;
+}
+
+section section:nth-of-type(3) {
+    z-index: 3;
+    right: 6.5em;
+    width: calc(100% - 2.5em* 4);
+    max-width: 52.5em;
+    padding-top: 13.125em;
+    padding-bottom: 16.25em;
+    cursor: default;
+}
+
+
+section section:nth-of-type(4) {
+    z-index: 1;
+    right: 4.25em;
+    width: calc(100% - 1.875em* 4);
+    max-width: 47.5em;
+    padding-top: 7.25em;
+    padding-bottom: 5em;
+    cursor: default;
+}
 
 section section.active {
     overflow: auto;
-    z-index: 99999 !important;
+    z-index: 100;
 }
+
+
+
+
+
 
 h1 {
     font-family: "rhode";
@@ -215,6 +274,7 @@ h1 {
     text-decoration-color: var(--color-fc-streep);
     text-decoration-thickness: 0.3em;
     text-transform: uppercase;
+
 }
 
 h2 {

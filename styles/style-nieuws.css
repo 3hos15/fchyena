@@ -1,13 +1,13 @@
 /* geel */
-section section:nth-of-type(3) {
-    z-index: 3;
+/* section section:nth-of-type(3) {
+    z-index: 4;
     right: 6.5em;
     width: calc(100% - 2.5em* 4);
     max-width: 52.5em;
     padding-top: 13.125em;
     padding-bottom: 16.25em;
     cursor: default;
-}
+} */
 
 section section:nth-of-type(3)  div {
     background-color: var(--color-nieuws);

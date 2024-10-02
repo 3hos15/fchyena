@@ -55,3 +55,26 @@ function makeSectionVierdeActive() {
 
 vierdeSection.onclick = makeSectionVierdeActive;
 
+
+const linkFilms = document.getElementById("films")
+const linkEten = document.getElementById("eten")
+const linkInfo = document.getElementById("info")
+const linkNieuws = document.getElementById("nieuws")
+
+
+function clickSectionFilm() {
+    linkFilms.style.zIndex = "1000";
+}
+
+function clickSectionEten() {
+    linkEten.style.zIndex = "1000";
+}
+
+function clickSectionInfo() {
+    linkInfo.style.zIndex = "1000";
+}
+
+function clickSectionNieuws() {
+    
+    linkNieuws.style.zIndex = "1000";
+}

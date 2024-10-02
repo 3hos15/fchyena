@@ -1,5 +1,10 @@
 /* blauw */
-section section:nth-of-type(1) {
+body ul {
+    list-style: none;
+    padding: 0;
+}
+/* section section:nth-of-type(1) {
+    z-index: 5;
     left:2.1em;
     padding-top:8.5em;
     z-index: 4;
@@ -7,7 +12,23 @@ section section:nth-of-type(1) {
     padding-bottom: 7.5em;
     margin-right: 2em;
     cursor: default;
+
+} */
+section section:nth-of-type(1) nav ul {
+    display: flex;
+    position: absolute;
+    top: 41.8em;
+    left: 12em;
+    gap: 2em;
 }
+section section:nth-of-type(1) nav ul a {
+    font-family: "rhode";
+    color: inherit;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
 
 section section:nth-of-type(1)  div {
     background-color: var(--color-films);
@@ -17,8 +38,8 @@ section section:nth-of-type(1)  div {
 }
 
 
-section section:nth-of-type(1) article:nth-of-type(1) ul{
-    /* background-color: red; */
+section section:nth-of-type(1) article:nth-of-type(1) ul:not(.films-actueel){
+    background-color: red;
     display: flex;
     overflow: auto;
     white-space: nowrap;
@@ -29,6 +50,33 @@ section section:nth-of-type(1) article:nth-of-type(1) ul li{
     padding-right: 1em;
 }
 
+
+section section:nth-of-type(1) article:nth-of-type(1) ul:nth-of-type(2) {
+    flex-direction: column;
+    background-color: rgb(6, 71, 71);
+    list-style: none;
+}
+section section:nth-of-type(1) article article article ul p {
+    font-size: 0.8em;
+}
+
+section section:nth-of-type(1) article article article ul img {
+    width: 5em;
+}
+
+figure img {
+    width: 10em;
+
+}
+
+/* .films-actueel li {
+    display: flex;
+} */
+
+
+
+
+/* ..................................................... */
 @media (min-width: 90em) {
 
     section section:nth-of-type(1) {
