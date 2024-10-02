@@ -56,25 +56,41 @@ function makeSectionVierdeActive() {
 vierdeSection.onclick = makeSectionVierdeActive;
 
 
-const linkFilms = document.getElementById("films")
-const linkEten = document.getElementById("eten")
-const linkInfo = document.getElementById("info")
-const linkNieuws = document.getElementById("nieuws")
+// const linkFilms = document.getElementById("films")
+// const linkEten = document.getElementById("eten")
+// const linkInfo = document.getElementById("info")
+// const linkNieuws = document.getElementById("nieuws")
 
 
-function clickSectionFilm() {
-    linkFilms.style.zIndex = "1000";
-}
+// function clickSectionFilm() {
+//     linkFilms.style.zIndex = "1000";
+// }
 
-function clickSectionEten() {
-    linkEten.style.zIndex = "1000";
-}
+// function clickSectionEten() {
+//     linkEten.style.zIndex = "1000";
+// }
 
-function clickSectionInfo() {
-    linkInfo.style.zIndex = "1000";
-}
+// function clickSectionInfo() {
+//     linkInfo.style.zIndex = "1000";
+// }
 
-function clickSectionNieuws() {
+// function clickSectionNieuws() {
     
-    linkNieuws.style.zIndex = "1000";
-}
+//     linkNieuws.style.zIndex = "1000";
+// }
+
+
+// https://chatgpt.com/share/66fd93f6-1ba8-8002-8757-2da6e79198f5
+// prompt: can you use a tags with ids to change content on screen
+// function clickSection(activeId) {
+//     // Reset z-index and hide all sections
+//     const sections = ['films', 'eten', 'info', 'nieuws'];
+//     sections.forEach(id => {
+//         document.getElementById(id).style.zIndex = "0";
+//     });
+
+//     // Set z-index for the clicked section and make it visible
+//     const activeSection = document.getElementById(activeId);
+//     activeSection.style.zIndex = "10";
+//     activeSection.style.display = "block"; // Show active section
+// }

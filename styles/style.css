@@ -77,6 +77,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    overflow-x: hidden;
+    /* z-index: 10000000; */
 
 }
 
@@ -96,11 +98,20 @@ nav:not(section nav) {
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: space-evenly;
+    transform: translate(9.5em, -9.5em); 
+    transition: transform .4s;
 }
+
 
 nav a {
     color: var(--color-nav-tekst);
 }
+/* nav a:nth-of-type(1):hover {
+    color: #DB0202;
+}
+nav a:nth-of-type(2):hover {
+    color: #2ddb02;
+} */
 
 nav button {
     padding: 1em;
@@ -108,39 +119,12 @@ nav button {
     border: none;
     appearance:none;
     height: 6.5em;
-    z-index: 99;
+    /* z-index: 99; */
     background-color: var(--color-background-nav);
 }
 
 nav ul:not(section nav ul) {
-    /* margin: 0;
-    padding: 0;
-    list-style:none;
-
-    position:fixed;
-    inset: 0;
-
-    translate:-100%;
-    transform: translate(204px, -210px);
-
-    background-color: var(--color-background-nav);
-
-    width: 260px;
-    height: 300px;
-    max-height: 100%; */
-    position: fixed;
-    z-index: 1100;
-    top: 0;
-    right: 0;
-    transform: translate(204px, -210px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 260px;
-    height: 300px;
-    max-height: 100%;
-    background-color: #000;
-    transition: transform .4s;
+    background-color: var(--color-background-nav)
 }
 
 nav ul:not(section nav ul) li {
@@ -156,44 +140,59 @@ nav button span {
 	background-color: var(--color-background);
 	grid-row-start: 1;
 	grid-column-start: 1;
-
 }
 
 nav button span:nth-child(1) {
 	translate: 0 -.35em -.5em;
+    transition: .3s;
+    transition-delay: .3s;
 }
   
 nav button span:nth-child(2) {
 	translate: none;
+    transition: .3s;
+    transition-delay: .3s;
 }
   
 nav button span:nth-child(3) {
 	translate: 0 .35em .5em;
+    transition: .3s;
+    transition-delay: .3s;
 }
-nav.toonMenu button {
-    z-index: 99;
-}
-/*  */
-nav.toonMenu ul {
-    /* z-index: 99;
-    translate: 10em; */
-    transform: translate(10em, 10em);
 
-    /* position: relative; */
+
+header nav.toonMenu {
+    /* z-index: 1000000000; */
+    background-color: var(--color-background-nav);
+    transform: translate(0em, 0em);
+    transition: transform .4s;
+
+
+}
+
+nav.toonMenu button {
+    padding-top: 3.5em;
+    transition: .3s;
 }
 
 nav.toonMenu span:nth-child(1) {
 	translate:0 0;
 	rotate: 45deg;
+    transition: .3s;
+    transition-delay: .3s;
 }
   
 nav.toonMenu span:nth-child(2) {
 	scale: 0;
+    transition: .3s;
+    transition-delay: .3s;
 }
 
 nav.toonMenu span:nth-child(3) {
 	translate:0 -.7em;
 	rotate: -45deg;
+    transition: .3s;
+    transition-delay: .3s;
 }
 
 section section {
@@ -254,7 +253,7 @@ section section:nth-of-type(4) {
 
 section section.active {
     overflow: auto;
-    z-index: 100;
+    z-index: 10000;
 }
 
 
