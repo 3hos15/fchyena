@@ -242,8 +242,8 @@ h1 {
     text-decoration-color: var(--color-fc-streep);
     text-decoration-thickness: 0.3em;
     text-transform: uppercase;
-    z-index: 10; /* Lower than nav */
-    position: relative; /* Ensures z-index works */
+    z-index: 10; 
+    position: relative;
 }
 
 h2 {
