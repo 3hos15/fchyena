@@ -30,12 +30,15 @@ section section:nth-of-type(1)  div {
 }
 
 
-section section:nth-of-type(1) article:nth-of-type(1) ul:not(.films-actueel){
+section section:nth-of-type(1) article:nth-of-type(1) ul{
     display: flex;
     overflow: auto;
     white-space: nowrap;
-    gap: 2em;
+    width: 100%;
+    gap: 9em;
 }
+
+
 
 section section:nth-of-type(1) article:nth-of-type(1) ul li{
     padding-right: 1em;
