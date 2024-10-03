@@ -14,27 +14,35 @@ section section:nth-of-type(2)  div {
     padding: 5em 5em 2.5em 5em;
 }
 
-@media (min-width: 90em) {
+main > section > section:nth-of-type(2) div > h2:nth-of-type(1) {
+    position: absolute;
+    right: .5em;
+    top: 2.3em;
+    margin: 0;
+    font-size: 3.3em;
+}
 
+/* ....................................................... */
+@media (min-width: 90em) {
     section section:nth-of-type(1) {
-        width: calc(100% - 40px* 5);
-        width: 1240px;
-        left: calc(50% - 1440px / 2 + 40px);
+        width: calc(100% - 2.5em * 5);
+        width: 77.5em;
+        left: calc(50% - 90em / 2 + 2.5em);
     }
 
     section section:nth-of-type(2) {
-        left: calc(50% - 1440px / 2 + 40px* 12);
+        left: calc(50% - 90em / 2 + 2.5em * 12);
     }
 
     section section:nth-of-type(3) {
-        left: calc(50% - 1440px / 2 + 500px);
+        left: calc(50% - 90em / 2 + 31.25em);
     }
 
     section section:nth-of-type(4) {
-
-        left: calc(50% - 1440px / 2 + 40px* 15.25);
+        left: calc(50% - 90em / 2 + 2.5em * 15.25);
     }
 }
+
 
 @media (max-width: 80em) {
     section section:nth-of-type(1) {

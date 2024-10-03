@@ -3,27 +3,19 @@ body ul {
     list-style: none;
     padding: 0;
 }
-/* section section:nth-of-type(1) {
-    z-index: 5;
-    left:2.1em;
-    padding-top:8.5em;
-    z-index: 4;
-    width: calc(100% - 2.5em* 5);
-    padding-bottom: 7.5em;
-    margin-right: 2em;
-    cursor: default;
 
-} */
 section section:nth-of-type(1) nav ul {
     display: flex;
     position: absolute;
-    top: 41.8em;
+    top: 40.5em;
     left: 12em;
     gap: 2em;
 }
+
+
 section section:nth-of-type(1) nav ul a {
     font-family: "rhode";
-    color: inherit;
+    color: var(--color-tekst);
     letter-spacing: 1px;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -39,7 +31,6 @@ section section:nth-of-type(1)  div {
 
 
 section section:nth-of-type(1) article:nth-of-type(1) ul:not(.films-actueel){
-    background-color: red;
     display: flex;
     overflow: auto;
     white-space: nowrap;
@@ -53,7 +44,6 @@ section section:nth-of-type(1) article:nth-of-type(1) ul li{
 
 section section:nth-of-type(1) article:nth-of-type(1) ul:nth-of-type(2) {
     flex-direction: column;
-    background-color: rgb(6, 71, 71);
     list-style: none;
 }
 section section:nth-of-type(1) article article article ul p {
@@ -69,35 +59,28 @@ figure img {
 
 }
 
-/* .films-actueel li {
-    display: flex;
-} */
-
-
-
 
 /* ..................................................... */
 @media (min-width: 90em) {
-
     section section:nth-of-type(1) {
-        width: calc(100% - 40px* 5);
-        width: 1240px;
-        left: calc(50% - 1440px / 2 + 40px);
+        width: calc(100% - 2.5em * 5);
+        width: 77.5em;
+        left: calc(50% - 90em / 2 + 2.5em);
     }
 
     section section:nth-of-type(2) {
-        left: calc(50% - 1440px / 2 + 40px* 12);
+        left: calc(50% - 90em / 2 + 2.5em * 12);
     }
 
     section section:nth-of-type(3) {
-        left: calc(50% - 1440px / 2 + 500px);
+        left: calc(50% - 90em / 2 + 31.25em);
     }
 
     section section:nth-of-type(4) {
-
-        left: calc(50% - 1440px / 2 + 40px* 15.25);
+        left: calc(50% - 90em / 2 + 2.5em * 15.25);
     }
 }
+
 
 @media (max-width: 80em) {
     section section:nth-of-type(1) {

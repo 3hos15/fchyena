@@ -55,6 +55,56 @@ function makeSectionVierdeActive() {
 
 vierdeSection.onclick = makeSectionVierdeActive;
 
+// let vidImage = document.querySelector("section section div div img");
+// let fcVideo = document.querySelector("section section div div video");
+// let vidButton = document.querySelector("section section div div button");
+
+// // Add click event to the button
+// vidButton.addEventListener('click', function() {
+//     // Hide the image
+//     vidImage.style.display = 'none';
+    
+//     // Show the video
+//     fcVideo.style.display = 'block';
+    
+//     // Play the video
+//     fcVideo.play();
+// });
+
+// Bron: chatgpt 
+// prompt: "can you make it so that the button acts as a toggle" + zelfgeschreven code hierboven, zelf classLists toegevoegd
+
+let vidImage = document.querySelector("section section div div img");
+let fcVideo = document.querySelector("section section div div video");
+let vidButton = document.querySelector("section section div div button");
+
+let isPlaying = false;
+
+vidButton.addEventListener('click', function() {
+    if (!isPlaying) {
+        vidImage.style.display = 'none';
+        fcVideo.style.display = 'block';
+        fcVideo.play();
+        vidButton.classList.add('smallButton')
+        isPlaying = true; 
+    } else {
+        fcVideo.pause();
+        fcVideo.style.display = 'none';
+        vidImage.style.display = 'block';
+        vidButton.classList.remove('smallButton')
+        isPlaying = false; 
+    }
+});
+
+
+
+
+
+
+
+
+
+
 
 // const linkFilms = document.getElementById("films")
 // const linkEten = document.getElementById("eten")
@@ -94,3 +144,6 @@ vierdeSection.onclick = makeSectionVierdeActive;
 //     activeSection.style.zIndex = "10";
 //     activeSection.style.display = "block"; // Show active section
 // }
+
+
+

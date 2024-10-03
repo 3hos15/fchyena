@@ -1,47 +1,20 @@
 :root {
     color-scheme: light dark;
-    --color-background: #ffffff;
-    --color-background-nav: #000000;
+    --color-background: light-dark(#ffffff,#000000);
+    --color-background-nav:#000000;
+    --color-buttonspan: #ffffff;
+    --color-logo: light-dark(#000000, #ffffff);
     --color-films: #00bee6;
     --color-eten: #a0dc00;
     --color-nieuws: #ff0;
-    --color-textselect: rgb(226, 226, 21);
     --color-info: #ffa000;
     --color-tekst: #000000;
     --color-nav-tekst: #ffffff;
     --color-fc-streep: #DB0202;
     --color-hover: #ffffff; 
+    --focus-nav-a: #8b8a8a; 
 }
 
-/* :root {
-    color-scheme: light dark;
-    --color-background: light-dark(#ffffff,#000000);
-    --color-background-nav: #000000;
-    --color-films: #00bee6;
-    --color-eten: #a0dc00;
-    --color-nieuws: #ff0;
-    --color-info: #ffa000;
-    --color-tekst: #000000;
-    --color-nav-tekst: #ffffff;
-    --color-fc-streep: #DB0202;
-    --color-hover: #ffffff; 
-} */
-/* 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #000000;
-        --color-background-nav: #ffffff;
-        --color-films: #0f88a0;
-        --color-eten: #6f9112;
-        --color-nieuws: rgb(135, 135, 11);
-        --color-info: #b47303;
-        --color-tekst: #ffffff;
-        --color-nav-tekst: #000000;
-        --color-fc-streep: #DB0202;
-        --color-hover: #000000; 
-    
-    }  
-} */
 
 @font-face {
     font-family: 'rhode';
@@ -77,10 +50,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    overflow: hidden;
+    height: 7em;
     overflow-x: hidden;
-    /* z-index: 10000000; */
-
+    z-index: 1000;
 }
+
+header:has(.toonMenu) {
+    height: fit-content;
+}
+
 
 header a {
     text-decoration: none;
@@ -106,12 +85,6 @@ nav:not(section nav) {
 nav a {
     color: var(--color-nav-tekst);
 }
-/* nav a:nth-of-type(1):hover {
-    color: #DB0202;
-}
-nav a:nth-of-type(2):hover {
-    color: #2ddb02;
-} */
 
 nav button {
     padding: 1em;
@@ -137,7 +110,7 @@ nav button span {
 	display:block;
 	width: 2.1em;
 	height: .35em;
-	background-color: var(--color-background);
+	background-color: var(--color-buttonspan);
 	grid-row-start: 1;
 	grid-column-start: 1;
 }
@@ -162,12 +135,11 @@ nav button span:nth-child(3) {
 
 
 header nav.toonMenu {
-    /* z-index: 1000000000; */
     background-color: var(--color-background-nav);
     transform: translate(0em, 0em);
     transition: transform .4s;
-
-
+    position: relative;
+    z-index: 10000000;
 }
 
 nav.toonMenu button {
@@ -217,7 +189,6 @@ section section:nth-of-type(1) {
     padding-bottom: 7.5em;
     margin-right: 2em;
     cursor: default;
-
 }
 
 section section:nth-of-type(2) {
@@ -253,11 +224,8 @@ section section:nth-of-type(4) {
 
 section section.active {
     overflow: auto;
-    z-index: 10000;
+    z-index: 100;
 }
-
-
-
 
 
 
@@ -266,6 +234,7 @@ h1 {
     font-size: 4.3em;
     letter-spacing: 1px;
     font-weight: lighter;
+    color: var(--color-logo);
     margin: 0;
     margin-left: 0.7em;
     margin-top: 0.5em;
@@ -273,7 +242,8 @@ h1 {
     text-decoration-color: var(--color-fc-streep);
     text-decoration-thickness: 0.3em;
     text-transform: uppercase;
-
+    z-index: 10; /* Lower than nav */
+    position: relative; /* Ensures z-index works */
 }
 
 h2 {
@@ -294,6 +264,7 @@ p {
     font-weight: lighter;
     width: 90%;
     line-height: 1.4;
+    margin-top: 0;
 }
 
 a {
@@ -304,7 +275,7 @@ a:not(section section:nth-of-type(1) div a):hover {
     text-decoration: none;
 }
 
-main button {
+main button:not(div div button) {
     cursor: pointer;
     border: none;
     background: none;
@@ -332,27 +303,49 @@ img {
     width: 90%;
 }
 
+a:focus {
+    outline: 2px solid var(--color-hover);
+    background-color: var(--color-background-nav);
+    color: var(    --color-nav-tekst);
+}
+
+
+button:focus {
+    outline: 2px solid var(--color-hover);
+    background-color: var(--color-background-nav);
+    color: var(    --color-nav-tekst); 
+}
+
+nav a:focus {
+    outline: 2px solid var(--color-hover);
+    color: var(--color-hover);
+    background-color:var(--focus-nav-a) ;
+}
+
+
+
+
 
 @media (min-width: 90em) {
-
     section section:nth-of-type(1) {
-        width: calc(100% - 40px* 5);
-        width: 1240px;
-        left: calc(50% - 1440px / 2 + 40px);
+        width: calc(100% - 2.5em * 5);
+        width: 77.5em;
+        left: calc(50% - 90em / 2 + 2.5em);
     }
 
     section section:nth-of-type(2) {
-        left: calc(50% - 1440px / 2 + 40px* 12);
+        left: calc(50% - 90em / 2 + 2.5em * 12);
     }
 
     section section:nth-of-type(3) {
-        left: calc(50% - 1440px / 2 + 500px);
+        left: calc(50% - 90em / 2 + 31.25em);
     }
 
     section section:nth-of-type(4) {
-        left: calc(50% - 1440px / 2 + 40px* 15.25);
+        left: calc(50% - 90em / 2 + 2.5em * 15.25);
     }
 }
+
 
 @media (max-width: 80em) {
     section section:nth-of-type(1) {

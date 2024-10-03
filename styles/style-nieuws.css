@@ -1,13 +1,4 @@
 /* geel */
-/* section section:nth-of-type(3) {
-    z-index: 4;
-    right: 6.5em;
-    width: calc(100% - 2.5em* 4);
-    max-width: 52.5em;
-    padding-top: 13.125em;
-    padding-bottom: 16.25em;
-    cursor: default;
-} */
 
 section section:nth-of-type(3)  div {
     background-color: var(--color-nieuws);
@@ -17,29 +8,75 @@ section section:nth-of-type(3)  div {
 main > section > section:nth-of-type(3) div > h2:nth-of-type(1) {
     writing-mode: vertical-lr;
     position: absolute;
-    right: 1em;
+    right: .5em;
     margin: 0;
-    font-size: 3em;
+    font-size: 3.3em;
+}
+section section:nth-of-type(3) div img {
+    width: 97%;
+    display: block;
+    height: auto;
+    margin-bottom: 2em;
+}
+video {
+    display: none;
+    width: 78.5%;
+    position: absolute;
+    bottom: -254.2em;
+    left: 2.5em;
+    margin-bottom: 2em;
+
+}
+section section:nth-of-type(3) div div {
+    padding: 0;
+}
+section section:nth-of-type(3) div div button {
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 337.5em;
+    left: 42%;
+    transition: .3s;
+    margin-top: -29px;
+    margin-left: -29px;
+    cursor: pointer;
 }
 
+section section:nth-of-type(3) div div button img:hover {
+    opacity: .5;
+}
+section section:nth-of-type(3) div div button.smallButton {
+    width: 5em;
+    top: 350em;
+    left: 9%;
+    transition: .3s;
+}
+
+section section:nth-of-type(3) div article p:nth-of-type(1) {
+    font-weight: 700;
+}
+
+/* .............................................. */
 @media (min-width: 90em) {
 
     section section:nth-of-type(1) {
-        width: calc(100% - 40px* 5);
-        width: 1240px;
-        left: calc(50% - 1440px / 2 + 40px);
+        width: calc(100% - 5 * 2.5em);
+        width: 77.5em;
+        left: calc(50% - 90em / 2 + 2.5em);
     }
 
     section section:nth-of-type(2) {
-        left: calc(50% - 1440px / 2 + 40px* 12);
+        left: calc(50% - 90em / 2 + 2.5em * 12);
     }
 
     section section:nth-of-type(3) {
-        left: calc(50% - 1440px / 2 + 500px);
+        left: calc(50% - 90em / 2 + 31.25em);
     }
 
     section section:nth-of-type(4) {
-        left: calc(50% - 1440px / 2 + 40px* 15.25);
+        left: calc(50% - 90em / 2 + 2.5em * 15.25);
     }
 }
 

@@ -100,11 +100,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | choice         | student 2          | student 3    | student 4        |
+  | choice         | fatima             | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | Vraag over     | en dit             | en ik dit    | en dan ik dat    |
-  | scroll home    | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | page           | ...                | ...          | ...              |
+  | Vraag over     | vraag over         |              |                  |
+  | scroll home    | pulsing button op  |              |                  |
+  | page           | homepage           | ...          | ...              |
 
 
   ### Verslag van meeting
@@ -112,7 +112,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
  - Goed kijken naar dingen die een links of buttons zijn
  - Elementen nesten
- - aria-laber gebruiken
+ - aria-label gebruiken
  - 
 
 </details>
@@ -138,19 +138,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | Choice         | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | nav in hambu-  | en dit             | en ik dit    | en dan ik dat    |
-  | ger menu.      | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Choice         | student 2       | student 3    | student 4        |
+  | ---            | ---             | ---          | ---              |
+  | nav in hambu-  |                 |              |                  |
+  | ger menu.      |                 |              |                  | 
+  | ...            | ...             | ...          | ...              |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - goed gebruik maken van de inspect in de browser om te kijken of er ergens bijv. verkeerde margin of padding is
-  - gebruik maken van pseude selectoren
-  - 
+  - gebruik maken van pseudo selectoren
+  - goed gebruik maken van de inspector om fouten te vinden
 
 </details>
 
@@ -165,6 +165,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  - vergeleken met de officele site van FC hyena, heb ik duidelijk focus states (zij hebben er geen).
+  - als selector voor de tekst gebruiken ze dezelfde gele kleur als de nieuws pagina, deze heb ik veranderd zodat je op die pagina wel de selector kleur ziet.
 
 </details>
 
@@ -185,18 +187,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   | Choice         | student 2          | student 3    | student 4        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | sections over  | scalen met grid    | image mee    |grid en foto op   |
+  | elkaar laten   |                    | laten        | zelfde maat      |
+  | scrollen       | ...                | bewegen      | krijgen          |
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - light-dark gebruiken
+  - scroll based animations
+  - image fit content
 
 </details>
 
@@ -210,19 +211,31 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/filmpagina.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/nieuwspagina.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/etenpagina.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/infopagina.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Ik heb veel geleerd over hoe ik de website zo toeganglijk mogelijk kan maken. Ook heb ik veel ondekt over het stijlen van elementen en wat javascript dingen zoals classList. 
+
+  Op de info pagina heb ik geleerd hoe ik dmv flex en ids content op het scherm kan 'verstoppen' en kan laten veranderen zonder javascript.
+  <img src="readme-images/infopagina.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+  - Header en nav op de goede z-index krijgen
+  - Links in de header nav de sections laten openen
+  - Apart hover kleuren in de header nav
+  - Film pagina
+  - De naam van de link naar de content op de info pagina wit laten wanneer je er op het gedrukt (en de andere moeten dan weer terug)
+  - Met tabben de sections laten openen (als je nu door de links tabt, tabt ie wel door de section maar blijft het stacked)
+  - laatste media query voor kleine scherm
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/filmpagina.png" width="375px" alt="uitomst opdracht 1">
 </details>
 
 
@@ -238,8 +251,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. Chatgpt prompt: "can you make it so that the button acts as a toggle" + zelfgeschreven code ( // let vidImage = document.querySelector("section section div div img");
+// let fcVideo = document.querySelector("section section div div video");
+// let vidButton = document.querySelector("section section div div button");
+
+// // Add click event to the button
+// vidButton.addEventListener('click', function() {
+//     // Hide the image
+//     vidImage.style.display = 'none';
+    
+//     // Show the video
+//     fcVideo.style.display = 'block';
+    
+//     // Play the video
+//     fcVideo.play();
+// });), zelf classLists toegevoegd
+
+  2. https://fchyena.nl/ voor de calc berekening van de width en in de media queries
+  
 
 </details>
