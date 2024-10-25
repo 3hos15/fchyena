@@ -39,8 +39,7 @@ section section:nth-of-type(1) article:nth-of-type(1) ul{
 }
 
 
-
-section section:nth-of-type(1) article:nth-of-type(1) ul li{
+section section:nth-of-type(1) article:nth-of-type(1) > ul > li{
     padding-right: 1em;
 }
 

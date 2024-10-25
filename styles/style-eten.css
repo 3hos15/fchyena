@@ -27,7 +27,7 @@ section section:nth-of-type(2) article:nth-of-type(4) ul {
 
 
 section section:nth-of-type(2) h2 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 section section:nth-of-type(2) article:nth-of-type(2) h2,
