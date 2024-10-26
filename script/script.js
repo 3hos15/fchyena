@@ -65,14 +65,13 @@ vidButton.addEventListener('click', function() {
         vidImage.style.display = 'none';
         fcVideo.style.display = 'block';
         fcVideo.play();
-        vidButton.classList.add('smallButton')
+        vidButton.classList.add('smallButton');
         isPlaying = true; 
-    } 
-    else {
+    } else {
         fcVideo.pause();
         fcVideo.style.display = 'none';
         vidImage.style.display = 'block';
-        vidButton.classList.remove('smallButton')
+        vidButton.classList.remove('smallButton');
         isPlaying = false; 
     }
 });
