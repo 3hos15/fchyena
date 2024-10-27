@@ -1,5 +1,6 @@
 console.log("Welkom!!!!!!!!!!!!!!!!!!!!!! :D");
 
+//Menu
 let theButton = document.querySelector("nav button");
 let theNav = document.querySelector("body > nav");
 
@@ -10,6 +11,7 @@ function toggleMenu() {
   theButton.classList.toggle("toonMenu")
 };
 
+//Sections naar voren halen bij het klikken op de section
 const eersteSection = document.querySelector("section section:nth-of-type(1)");
 const tweedeSection = document.querySelector("section section:nth-of-type(2)");
 const derdeSection = document.querySelector("section section:nth-of-type(3)");
@@ -55,6 +57,7 @@ function makeSectionVierdeActive() {
 
 vierdeSection.onclick = makeSectionVierdeActive;
 
+//Video laten spelen en stoppen
 let vidImage = document.querySelector("section section div div img");
 let fcVideo = document.querySelector("section section div div video");
 let vidButton = document.querySelector("section section div div button");
@@ -76,6 +79,7 @@ vidButton.addEventListener('click', function() {
     }
 });
 
+//Sections naar voren halen bij het tabben in de linkjes
 const linksEersteSection = document.querySelectorAll('section section:nth-of-type(1) a')
 linksEersteSection.forEach(linkEersteSection =>{
     linkEersteSection.onfocus = makeSectionEersteActive;
@@ -96,6 +100,7 @@ linksVierdeSection.forEach(linkVierdeSection =>{
     linkVierdeSection.onfocus = makeSectionVierdeActive;
 });
 
+//Sections naar voren halen als er in het menu wordt geklikt
 const navFilms = document.querySelector("nav ul li:nth-of-type(1) a");
 navFilms.onclick = function() {
     makeSectionEersteActive();

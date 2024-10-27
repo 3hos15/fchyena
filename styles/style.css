@@ -45,21 +45,7 @@ body {
 header {
     position: sticky;
     overflow: hidden;
-
-    /* top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    overflow: hidden;
-    height: 7em;
-    overflow-x: hidden;
-    z-index: 1000; */
-
 }
-
-
-
-
 
 body > nav {
     position: absolute;
@@ -74,15 +60,16 @@ body > nav {
     flex-direction: row-reverse;
     align-items: flex-end;
     justify-content: space-evenly;
-    background-color: var(    --color-background-nav);
-    /* transform: translate(48em, -9.5em);  */
-    transition: transform .4s;
+    background-color: var(--color-background-nav);
+    transition: .4s;
     right: -9.5em;
     top: -10em;
 
     height: fit-content; 
     width: fit-content;  
 }
+
+
 
 body > nav a {
     text-decoration: none;
@@ -124,7 +111,6 @@ body > nav button {
     border: none;
     appearance:none;
     height: 6.5em;
-    /* z-index: 99; */
     background-color: var(--color-background-nav);
 }
 
@@ -169,7 +155,7 @@ body > nav button span:nth-child(3) {
 body >  nav.toonMenu {
     background-color: var(--color-background-nav);
     /* transform: translate(0em, 0em); */
-    transition: transform .4s;
+    transition: .4s;
     right: 0em;
     top: 0em;
     z-index: 10000000;
