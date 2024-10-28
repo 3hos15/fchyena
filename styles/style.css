@@ -95,14 +95,12 @@ nav ul li:nth-of-type(2) a:hover {
     color: var(--color-eten);
 }
 
-
 nav ul li:nth-of-type(3) a:hover {
     color: var(--color-info);
 }
 
 nav ul li:nth-of-type(4) a:hover {
     color: var(--color-nieuws);
-
 }
 
 body > nav button {
@@ -154,13 +152,11 @@ body > nav button span:nth-child(3) {
 
 body >  nav.toonMenu {
     background-color: var(--color-background-nav);
-    /* transform: translate(0em, 0em); */
     transition: .4s;
     right: 0em;
     top: 0em;
     z-index: 10000000;
     overflow-x: none;
-
 }
 
 body > nav.toonMenu button {
@@ -247,8 +243,6 @@ section section.active {
     overflow: auto;
     z-index: 100;
 }
-
-
 
 h1 {
     font-family: "rhode";
@@ -386,4 +380,45 @@ nav a:focus {
     }
 }
 
+@media (max-width: 47.9em) {
+
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        z-index: 0; 
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    section section:nth-of-type(1) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+    }
+
+    section section:nth-of-type(2) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+
+    }
+
+    section section:nth-of-type(3) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+
+    }
+
+    section section:nth-of-type(4) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+
+    }
+}
 

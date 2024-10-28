@@ -63,7 +63,7 @@ figure img {
 
 
 /* ..................................................... */
-@media (min-width: 90em) {
+/* @media (min-width: 90em) {
     section section:nth-of-type(1) {
         width: calc(100% - 2.5em * 5);
         width: 77.5em;
@@ -101,4 +101,34 @@ figure img {
 
         padding-top: 9em;
     }
-}
+} */
+
+/* @media (max-width: 47.9em) {
+    section section:nth-of-type(1) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+        margin-top: 3.75em;
+    }
+
+    section section:nth-of-type(2) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+        margin-top: 3.75em;
+    }
+
+    section section:nth-of-type(3) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+        margin-top: 3.75em;
+    }
+
+    section section:nth-of-type(4) {
+        left: 0;
+        display: block;
+        width: calc(100% - 2.5em / 2);
+        margin-top: 3.75em;
+    }
+} */
