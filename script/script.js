@@ -124,3 +124,10 @@ navNieuws.onclick = function() {
     makeSectionDerdeActive();
     toggleMenu();
 };
+
+// const mediaQuery = window.matchMedia('(max-width: 47.9em)');
+// if (mediaQuery.matches) {
+//     console.log("Dit werkt");
+// } else {
+//     console.log("Dit werkt ook");
+// }

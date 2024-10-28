@@ -110,3 +110,11 @@ section section:nth-of-type(2) article:nth-of-type(4) h2{
         margin-top: 3.75em;
     }
 } */
+
+@media (max-width: 47.9em) {
+
+    section section:nth-of-type(2) div {
+        background-color: var(--color-eten);
+        padding: 1em 1em 1em 1em; 
+    }
+}
