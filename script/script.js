@@ -11,7 +11,33 @@ function toggleMenu() {
   theButton.classList.toggle("toonMenu")
 };
 
-//Sections naar voren halen bij het klikken op de section
+//Sections naar voren halen als er in het menu wordt geklikt
+const navFilms = document.querySelector("nav ul li:nth-of-type(1) a");
+const navEten = document.querySelector("nav ul li:nth-of-type(2) a");
+const navInfo = document.querySelector("nav ul li:nth-of-type(3) a");
+const navNieuws = document.querySelector("nav ul li:nth-of-type(4) a"); 
+
+navFilms.onclick = function() {
+    makeSectionEersteActive();
+    toggleMenu();
+};
+
+navEten.onclick = function() {
+    makeSectionTweedeActive();
+    toggleMenu();
+};
+
+navInfo.onclick = function() {
+    makeSectionVierdeActive();
+    toggleMenu();
+};
+
+navNieuws.onclick = function() {
+    makeSectionDerdeActive();
+    toggleMenu();
+};
+
+//Sections naar voren halen bij het klikken op de section + line onder geselecteerde section in de nav
 const eersteSection = document.querySelector("section section:nth-of-type(1)");
 const tweedeSection = document.querySelector("section section:nth-of-type(2)");
 const derdeSection = document.querySelector("section section:nth-of-type(3)");
@@ -22,7 +48,11 @@ function makeSectionEersteActive() {
 	tweedeSection.classList.remove("active");
     derdeSection.classList.remove("active");
     vierdeSection.classList.remove("active");
-    console.log("Section Films is actief");
+
+    navFilms.classList.add("underline")
+    navEten.classList.remove("underline") 
+    navInfo.classList.remove("underline") 
+    navNieuws.classList.remove("underline")  
 };
 
 eersteSection.onclick = makeSectionEersteActive;
@@ -32,7 +62,11 @@ function makeSectionTweedeActive() {
 	eersteSection.classList.remove("active");
     derdeSection.classList.remove("active");
     vierdeSection.classList.remove("active");
-    console.log("Section Eten is actief");
+
+    navFilms.classList.remove("underline")
+    navEten.classList.add("underline") 
+    navInfo.classList.remove("underline") 
+    navNieuws.classList.remove("underline") 
 };
 
 tweedeSection.onclick = makeSectionTweedeActive;
@@ -42,7 +76,11 @@ function makeSectionDerdeActive() {
     eersteSection.classList.remove("active");
 	tweedeSection.classList.remove("active");
     vierdeSection.classList.remove("active");
-    console.log("Section Nieuws is actief");
+
+    navFilms.classList.remove("underline")
+    navEten.classList.remove("underline") 
+    navInfo.classList.remove("underline") 
+    navNieuws.classList.add("underline") 
 };
 
 derdeSection.onclick = makeSectionDerdeActive;
@@ -52,7 +90,11 @@ function makeSectionVierdeActive() {
     eersteSection.classList.remove("active");
 	tweedeSection.classList.remove("active");
     derdeSection.classList.remove("active"); 
-    console.log("Section Info is actief");
+
+    navFilms.classList.remove("underline")
+    navEten.classList.remove("underline") 
+    navInfo.classList.add("underline") 
+    navNieuws.classList.remove("underline") 
 };
 
 vierdeSection.onclick = makeSectionVierdeActive;
@@ -100,30 +142,7 @@ linksVierdeSection.forEach(linkVierdeSection =>{
     linkVierdeSection.onfocus = makeSectionVierdeActive;
 });
 
-//Sections naar voren halen als er in het menu wordt geklikt
-const navFilms = document.querySelector("nav ul li:nth-of-type(1) a");
-navFilms.onclick = function() {
-    makeSectionEersteActive();
-    toggleMenu();
-};
 
-const navEten = document.querySelector("nav ul li:nth-of-type(2) a");
-navEten.onclick = function() {
-    makeSectionTweedeActive();
-    toggleMenu();
-};
-
-const navInfo = document.querySelector("nav ul li:nth-of-type(3) a");
-navInfo.onclick = function() {
-    makeSectionVierdeActive();
-    toggleMenu();
-};
-
-const navNieuws = document.querySelector("nav ul li:nth-of-type(4) a");
-navNieuws.onclick = function() {
-    makeSectionDerdeActive();
-    toggleMenu();
-};
 
 // const mediaQuery = window.matchMedia('(max-width: 47.9em)');
 // if (mediaQuery.matches) {
