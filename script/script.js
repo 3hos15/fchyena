@@ -157,15 +157,18 @@ linksVierdeSection.forEach(linkVierdeSection =>{
 const gallery = document.querySelector('.gallery');
 const prevButton = document.querySelector('.previous');
 const nextButton = document.querySelector('.next');
-const scrollAmount = 1080; // Adjust for scroll distance per click
+const scrollAmount = 1080; 
 
-prevButton.addEventListener('click', () => {
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
+prevButton.addEventListener('click', function() {
     gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
 
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener('click', function() {
     gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
+
+
 // const mediaQuery = window.matchMedia('(max-width: 47.9em)');
 // if (mediaQuery.matches) {
 //     console.log("Dit werkt");
