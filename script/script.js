@@ -142,8 +142,30 @@ linksVierdeSection.forEach(linkVierdeSection =>{
     linkVierdeSection.onfocus = makeSectionVierdeActive;
 });
 
+// const filmButtonPrev = document.getElementsByClassName("previous");
+// const filmButtonNext = document.getElementsByClassName("next");
+
+// function nextImage() {
+
+// }
+
+// function prevImage() {
+    
+// }
 
 
+const gallery = document.querySelector('.gallery');
+const prevButton = document.querySelector('.previous');
+const nextButton = document.querySelector('.next');
+const scrollAmount = 1080; // Adjust for scroll distance per click
+
+prevButton.addEventListener('click', () => {
+    gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+nextButton.addEventListener('click', () => {
+    gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
 // const mediaQuery = window.matchMedia('(max-width: 47.9em)');
 // if (mediaQuery.matches) {
 //     console.log("Dit werkt");
