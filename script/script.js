@@ -168,11 +168,10 @@ nextButton.addEventListener('click', function() {
     gallery.scrollBy({ left: scrollAmount});
 });
 
-
 const galleryFilm = document.querySelector('#actueel article:nth-of-type(1) ul');
 const prevButtonFilm = document.querySelector('.previous-film');
 const nextButtonFilm = document.querySelector('.next-film');
-const scrollAmountFilm = 600;
+const scrollAmountFilm = 1000;
 
 prevButtonFilm.addEventListener('click', function() {
     galleryFilm.scrollBy({ left: -scrollAmountFilm});
@@ -181,7 +180,6 @@ prevButtonFilm.addEventListener('click', function() {
 nextButtonFilm.addEventListener('click', function() {
     galleryFilm.scrollBy({ left: scrollAmountFilm});
 });
-
 
 // const mediaQuery = window.matchMedia('(max-width: 47.9em)');
 // if (mediaQuery.matches) {

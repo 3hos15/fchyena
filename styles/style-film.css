@@ -93,10 +93,17 @@ section section:nth-of-type(1) div > article:nth-of-type(1) ul a {
     text-decoration: none;
 }
 
-/* section section:nth-of-type(1) article:nth-of-type(1) ul:nth-of-type(2) {
-    flex-direction: column;
-    list-style: none;
-} */
+section section:nth-of-type(1)  nav span {
+    position: relative;
+    top: 1em;
+    left: -39em;
+    display:block;
+	width: 70em;
+	height: .4em;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    background-color: var(--color-background-nav);
+}
 
 section section:nth-of-type(1) article:nth-of-type(2) h2:not(.film-info h2) {
     font-size: 3em;
@@ -152,8 +159,6 @@ section section:nth-of-type(1) article:nth-of-type(2) article article ul div {
     padding: 0;
 }
 
-
-
 section section:nth-of-type(1) article article article ul p {
     font-size: 0.8em;
 }
@@ -173,8 +178,8 @@ figcaption {
 
 }
 .film-info div:nth-of-type(1) img {
-    width: 42em;
-    height: 25em;
+    width: 40em;
+    height: 23em;
 }
 
 
@@ -211,6 +216,10 @@ figcaption {
 .film-info li > div:nth-child(4) {
     grid-column: 2;
     grid-row: 3;
+    width: 2em;
+}
+.film-info li > div:nth-child(4) p{
+    width: 10em;
 }
 .film-info li > div:nth-child(5) {
     grid-column: 2;
@@ -242,7 +251,7 @@ figcaption {
 }
 
 .film-info li h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0;
 }
 
@@ -250,82 +259,10 @@ figcaption {
     margin: 0;
 }
 
-
-.navfilms {
+.navfilms{
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     white-space: nowrap;
     width: 100%;
-    scroll-behavior: smooth;
 }
 
-/* ..................................................... */
-/* @media (min-width: 90em) {
-    section section:nth-of-type(1) {
-        width: calc(100% - 2.5em * 5);
-        width: 77.5em;
-        left: calc(50% - 90em / 2 + 2.5em);
-    }
-
-    section section:nth-of-type(2) {
-        left: calc(50% - 90em / 2 + 2.5em * 12);
-    }
-
-    section section:nth-of-type(3) {
-        left: calc(50% - 90em / 2 + 31.25em);
-    }
-
-    section section:nth-of-type(4) {
-        left: calc(50% - 90em / 2 + 2.5em * 15.25);
-    }
-}
-
-
-@media (max-width: 80em) {
-    section section:nth-of-type(1) {
-        padding-top: 10em;
-    }
-
-    section section:nth-of-type(2) {
-        padding-top: 6.25em;
-    }
-
-    section section:nth-of-type(3) {
-        padding-top: 15.625em;
-    }
-
-    section section:nth-of-type(4) {
-
-        padding-top: 9em;
-    }
-} */
-
-/* @media (max-width: 47.9em) {
-    section section:nth-of-type(1) {
-        left: 0;
-        display: block;
-        width: calc(100% - 2.5em / 2);
-        margin-top: 3.75em;
-    }
-
-    section section:nth-of-type(2) {
-        left: 0;
-        display: block;
-        width: calc(100% - 2.5em / 2);
-        margin-top: 3.75em;
-    }
-
-    section section:nth-of-type(3) {
-        left: 0;
-        display: block;
-        width: calc(100% - 2.5em / 2);
-        margin-top: 3.75em;
-    }
-
-    section section:nth-of-type(4) {
-        left: 0;
-        display: block;
-        width: calc(100% - 2.5em / 2);
-        margin-top: 3.75em;
-    }
-} */
