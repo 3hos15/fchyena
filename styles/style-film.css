@@ -27,7 +27,7 @@ section section:nth-of-type(1) nav ul a:hover {
     text-decoration-thickness: .2em;
 }
 
-section section:nth-of-type(1) div {
+section section:nth-of-type(1) div:not(.film-info div) {
     background-color: var(--color-films);
     padding-left: 5em;
     padding-right: 5em;
@@ -154,13 +154,6 @@ section section:nth-of-type(1) article:nth-of-type(2) article article ul div {
 
 
 
-
-/* section section:nth-of-type(1) article:nth-of-type(2) article article ul div:nth-of-type(2) {
-    position: ab;
-    bottom: 28em;
-    right: -30em;
-} */
-
 section section:nth-of-type(1) article article article ul p {
     font-size: 0.8em;
 }
@@ -179,7 +172,7 @@ figcaption {
     text-transform: uppercase;
 
 }
-section section:nth-of-type(1) article:nth-of-type(2) article article ul div:nth-of-type(1) img {
+.film-info div:nth-of-type(1) img {
     width: 42em;
     height: 25em;
 }
@@ -243,6 +236,11 @@ section section:nth-of-type(1) article:nth-of-type(2) article article ul div:nth
     text-transform: uppercase;
 }
 
+.film-info li a:hover {
+    color: var(--color-tekst);
+    background-color: var(--color-nav-tekst);
+}
+
 .film-info li h2 {
     font-size: 3em;
     margin: 0;
@@ -251,6 +249,16 @@ section section:nth-of-type(1) article:nth-of-type(2) article article ul div:nth
 .film-info li p {
     margin: 0;
 }
+
+
+.navfilms {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
 /* ..................................................... */
 /* @media (min-width: 90em) {
     section section:nth-of-type(1) {
