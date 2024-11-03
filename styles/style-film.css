@@ -7,8 +7,8 @@ body ul {
 section section:nth-of-type(1) nav ul {
     display: flex;
     position: absolute;
-    top: 52em;
-    left: 12em;
+    top: 45.2em;
+    left: 13em;
     gap: 2em;
 }
 
@@ -17,10 +17,15 @@ section section:nth-of-type(1) nav ul a {
     font-family: "rhode";
     color: var(--color-tekst);
     letter-spacing: 1px;
-    font-size: 1.5em;
+    font-size: 1.6em;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
+section section:nth-of-type(1) nav ul a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: .2em;
+}
 
 section section:nth-of-type(1) div {
     background-color: var(--color-films);
@@ -51,20 +56,19 @@ section section:nth-of-type(1) div {
 
 section section:nth-of-type(1) div > article:nth-of-type(1) ul:nth-of-type(1){
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     white-space: nowrap;
     width: 100%;
+    scroll-behavior: smooth;
+
 }
 
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(1) img,
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(2) img,
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(3) img,
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(4) img {
+section section:nth-of-type(1) div > article:nth-of-type(1) ul li img {
     width: 67.5em;
+    height: 25em;
 }
 
 section section:nth-of-type(1) div > article:nth-of-type(1) ul {
-    /* background-color: lightcoral; */
     height: fit-content;
     overflow-x: hidden;
 }
@@ -87,48 +91,76 @@ section section:nth-of-type(1) div > article:nth-of-type(1) ul a {
     left: 40em;
     bottom: 1.2em;
     text-decoration: none;
-    /* right: -30em; */
-}
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(3) a {
-    left: 37em;
-}
-section section:nth-of-type(1) div > article:nth-of-type(1) ul img {
-    height: 25em;
-    
-}
-/* section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(1) {
-    background-color: rgb(108, 168, 189);
-}
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(2) {
-    background-color: rgb(150, 151, 184);
 }
 
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(3) {
-    background-color: rgb(132, 240, 128);
-}
-
-section section:nth-of-type(1) div > article:nth-of-type(1) ul li:nth-of-type(4) {
-    background-color: rgb(225, 240, 128);
-} */
-
-
-/* section section:nth-of-type(1) div > article:nth-of-type(1) ul {
-    background-color: deeppink;
-} */
-
-section section:nth-of-type(1) article:nth-of-type(2) ul {
-    background-color: beige;
-}
-
-
-/* section section:nth-of-type(1) article:nth-of-type(1) > ul > li{
-    padding-right: 1em;
-} */
-
-section section:nth-of-type(1) article:nth-of-type(1) ul:nth-of-type(2) {
+/* section section:nth-of-type(1) article:nth-of-type(1) ul:nth-of-type(2) {
     flex-direction: column;
     list-style: none;
+} */
+
+section section:nth-of-type(1) article:nth-of-type(2) h2:not(.film-info h2) {
+    font-size: 3em;
 }
+
+#actueel article:nth-of-type(1) {
+    margin-bottom: 5em;
+}
+
+#actueel article:nth-of-type(1) ul {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+#actueel article:nth-of-type(1) li {
+    width: 16em;
+}
+
+#actueel article:nth-of-type(1) img {
+    width: 14em;
+    height: 20em;
+}
+
+#actueel article:nth-of-type(1) a {
+    text-decoration: none;
+}
+
+.previous-film, .next-film {
+    position: absolute;
+    top: calc(50% - -33em);
+    width: 30px;
+    height: 30px;
+    border-color: var(--color-background-nav);
+    border-style: solid;
+    border-width: 7px 0 0 7px;
+    cursor: pointer;
+}
+
+.previous-film {
+    left: 2em;
+    transform: rotate(-45deg);
+}
+.next-film {
+    right: 2em;
+    transform: rotate(135deg);
+}
+
+
+section section:nth-of-type(1) article:nth-of-type(2) article article ul div {
+    padding: 0;
+}
+
+
+
+
+/* section section:nth-of-type(1) article:nth-of-type(2) article article ul div:nth-of-type(2) {
+    position: ab;
+    bottom: 28em;
+    right: -30em;
+} */
+
 section section:nth-of-type(1) article article article ul p {
     font-size: 0.8em;
 }
@@ -139,12 +171,86 @@ section section:nth-of-type(1) article article article ul img {
 
 figure img {
     width: 10em;
+}
+figcaption {
+    margin-top: .5em;
+    font-family: "rhode";
+    font-size: 1em;
+    text-transform: uppercase;
 
+}
+section section:nth-of-type(1) article:nth-of-type(2) article article ul div:nth-of-type(1) img {
+    width: 42em;
+    height: 25em;
 }
 
 
+.film-info li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0.6em;
+    align-items: start;
+}
 
+.film-info li > div:nth-child(1) {
+    grid-column: 1;
+    grid-row: span 4;
+}
 
+.film-info li > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.film-info li > div:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    gap: 0.3em;
+}
+
+.film-info li > div:nth-child(3) img {
+    width: 1.5em;
+    height: auto;
+}
+
+.film-info li > div:nth-child(4) {
+    grid-column: 2;
+    grid-row: 3;
+}
+.film-info li > div:nth-child(5) {
+    grid-column: 2;
+    grid-row: 4;
+}
+.film-info li {
+    padding: 1em;
+    padding-bottom: 3em;
+}
+
+.film-info li img {
+    width: 100%;
+    height: auto;
+}
+.film-info li a {
+    padding: .7em .5em .7em .5em;
+    color: var(--color-nav-tekst);
+    text-align: center;
+    background-color: var(--color-tekst);
+    text-decoration: none;
+    font-family: "rhode";
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.film-info li h2 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.film-info li p {
+    margin: 0;
+}
 /* ..................................................... */
 /* @media (min-width: 90em) {
     section section:nth-of-type(1) {

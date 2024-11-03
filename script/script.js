@@ -161,11 +161,25 @@ const scrollAmount = 1080;
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
 prevButton.addEventListener('click', function() {
-    gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    gallery.scrollBy({ left: -scrollAmount});
 });
 
 nextButton.addEventListener('click', function() {
-    gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    gallery.scrollBy({ left: scrollAmount});
+});
+
+
+const galleryFilm = document.querySelector('#actueel article:nth-of-type(1) ul');
+const prevButtonFilm = document.querySelector('.previous-film');
+const nextButtonFilm = document.querySelector('.next-film');
+const scrollAmountFilm = 600;
+
+prevButtonFilm.addEventListener('click', function() {
+    galleryFilm.scrollBy({ left: -scrollAmountFilm});
+});
+
+nextButtonFilm.addEventListener('click', function() {
+    galleryFilm.scrollBy({ left: scrollAmountFilm});
 });
 
 
