@@ -119,6 +119,7 @@ section section:nth-of-type(1) article:nth-of-type(2) h2:not(.film-info h2) {
     white-space: nowrap;
     width: 100%;
     scroll-behavior: smooth;
+    width: 80vw;
 }
 
 #actueel article:nth-of-type(1) li {
