@@ -171,7 +171,7 @@ nextButton.addEventListener('click', function() {
 const galleryFilm = document.querySelector('#actueel article:nth-of-type(1) ul');
 const prevButtonFilm = document.querySelector('.previous-film');
 const nextButtonFilm = document.querySelector('.next-film');
-const scrollAmountFilm = 1000;
+const scrollAmountFilm = 400;
 
 prevButtonFilm.addEventListener('click', function() {
     galleryFilm.scrollBy({ left: -scrollAmountFilm});
